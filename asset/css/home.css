@@ -1,0 +1,68 @@
+html{
+    background-color: mediumaquamarine;
+}
+
+body{
+    padding-left: 250px;
+    border-left-width: 25%;
+ 
+}
+
+
+.heading{
+text-align: center;
+color: maroon;
+background-color: yellow;
+width: 830px;
+letter-spacing: .5px;
+text-shadow: WHITE;
+}
+
+.formclass{
+    text-align: center;
+}
+
+.inline-items{
+    display: inline-block;
+    margin: 10px;
+    
+}
+
+#to-do-app-container{
+    background-color:lightslategray;
+    /* width: auto;
+    height: auto; */
+    /* border:5px solid red;
+    border-radius: 30PX; */
+    /* align-content: space-around;
+    display: flex; */
+    
+}
+
+.items{
+    display: inline-block;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.maindiv{
+    width: 800px;
+    height: 100px;
+    border:1px solid rgb(92, 0, 128);
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: center;
+    background-color: greenyellow;
+    /* position: fixed;
+    top:50%;
+    right:50%; */
+    
+    
+}
+
+.items_category {
+    border: 1px solid red;
+    background-color: red;
+    
+
+}

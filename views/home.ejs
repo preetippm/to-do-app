@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/home.css" >
+    </head>
+    <body>
+        <div class="heading">
+        <h1>TO-DO App!!</h1>
+        </div>
+        
+        <div class="maindiv">
+        <form class="formclass"  action="/Todoapp" method="POST">
+            
+            <label for="description"><b>DESCRIPTION</b></lable>
+            <input type="text" id="description" name="description" placeholder="Description" required><br><br>
+            
+            <div class="inline-items">
+            <label for="category"><b>CATEGORY</b></lable>
+            <select name="category" id="category">
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="school">School</option>
+                <option value="cleaning">Cleaning</option>
+                <option value="other">Other</option>
+            </select> &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="duedate"><b>DUE DATE</b></label>
+            <input type="date" id="duedate" name="duedate" placeholder="Description" required>
+
+
+            <button type="submit">Add Task</button>
+        </div>
+        </form><br>
+        <br>
+        
+        
+    
+
+        
+        
+
+        
+
+        <div id="to-do-app-container">
+
+            
+            
+                
+                
+                   <% for (let i of todoapp){%>
+                    <ul class="todoapp"></ul>
+                    <li class="details">
+                    <div class="items">
+                        
+                        <table>
+                            <tr>
+                                <td><p class="items" style="color: black; font-size: large;"><b><%= i.description %></b></p>&nbsp;&nbsp&nbsp&nbsp;</td>
+                                <td><p class="items" style="color:green ;"><%= i.duedate %></p>&nbsp;&nbsp&nbsp&nbsp;</td>
+                                <td><p class="items_category" style="color: whitesmoke;"><%= i.category %></p>&nbsp;&nbsp&nbsp&nbsp;</td>
+                                <td><div class="delete-button">
+                                    <a href="/delete-todoapp/?id=<%= i._id %>">
+                                        <label for="delete">Delete</label>  
+                                    </a>&nbsp;&nbsp&nbsp&nbsp;
+                                </div></td>
+                            </tr>
+
+
+                        </table>
+
+
+
+<!-- 
+                     <p class="items" style="color: chartreuse;"><b><%= i.description %></b></p>
+                     <p class="items" style="color: chocolate;"><%= i.category %></p>
+                     <p class="items" style="color:darkgreen ;"><%= i.duedate %></p> -->
+                     
+                    </div>
+                    <!-- <div class="delete-button">
+                        <a href="/delete-todoapp/?id=<%= i._id %>">
+                            <i class="fas fa-minus-square"></i>
+                            
+                        </a>
+                    </div> -->
+                    <hr>
+                </li>
+
+                <%}%>
+              
+            </ul>
+        </div>
+    
+     
+
+
+
+        <script type="text/javascript" src="/js/home.js" ></script>
+
+       </div>
+    </body>
+</html>
